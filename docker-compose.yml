@@ -2,7 +2,7 @@ version: '3'
 
 services:
   influxdb:
-    image: influxdb:lastest
+    image: influxdb:2
     env_file:
       - influxdb2.env
     volumes:
@@ -12,7 +12,7 @@ services:
     ports:
       - "8086:8086"
   telegraf:
-    image: telegraf:lastest
+    image: telegraf:1
     depends_on:
       - influxdb
     volumes:
